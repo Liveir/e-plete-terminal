@@ -1,20 +1,18 @@
+# rfid_handler.py
+
+
 import asyncio
 import aiohttp
 from datetime import datetime
 from connection_handler import ConnectionHandler
 
-"""
-SyncHandler
-
-Handles all routines for asynchronous operation of syncing the data 
-stored locally in the terminal to the database upon detection of 
-LAN connection.
-
-"""
+# Handles all routines for asynchronous operation of syncing the data 
+# stored locally in the terminal to the database upon detection of 
+# LAN connection.
 
 class SyncHandler:
     def __init__(self):
-        self.connection_handler = ConnectionHandler()
+        self.connection_handler = ConnectionHandler() # instantiated to be able to use check_connection()
 
     async def handle_events(self, rfid_handler):
         """

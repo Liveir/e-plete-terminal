@@ -1,4 +1,9 @@
+# connection_handler.py
+
 import subprocess
+
+# Handler for checking LAN connection to the IP address
+# where the database server is hosted.
 
 class ConnectionHandler:
     async def check_connection(self):
